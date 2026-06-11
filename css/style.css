@@ -1,3 +1,10 @@
+/* ── MV Faseyha — Dhivehi font ── */
+@font-face {
+  font-family: 'MV Faseyha';
+  src: url('https://dhivehi.mv/fonts/data/df/MV_Faseyha.otf') format('opentype');
+  font-display: swap;
+}
+
 /* ── Tokens ── */
 :root {
   --ocean:    #0077b6;
@@ -14,7 +21,7 @@
   --radius:   14px;
   --shadow:   0 4px 24px rgba(0,119,182,.10);
   --shadow-sm:0 2px 8px  rgba(0,119,182,.08);
-  --ff-thaana:'Noto Sans Thaana', sans-serif;
+  --ff-thaana:'MV Faseyha', 'Noto Sans Thaana', sans-serif;
   --ff-ui:    'Poppins', sans-serif;
   --transition: .2s ease;
 }
