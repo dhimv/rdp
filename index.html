@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="dv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ދިވެހި ތާނަ ލިޔުންތެރި ދަސްކުރުމަށް ތަރައްޤީ ކުރެވިފައިވާ ވެބް-އެޕް" />
+  <meta name="theme-color" content="#0077b6" />
+  <title>ދިވެހި އަލިފްބާ</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thaana:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ───────────── Header ───────────── -->
+  <header class="app-header">
+    <div class="header-content">
+      <div class="logo">
+        <span class="logo-icon">ދ</span>
+        <span class="logo-text">ދިވެހި އަލިފްބާ</span>
+      </div>
+      <nav class="main-nav" aria-label="ހޯދާ">
+        <button class="nav-btn active" data-section="home">ހޯމް</button>
+        <button class="nav-btn" data-section="alphabet">އަކުރު</button>
+        <button class="nav-btn" data-section="fili">ފިލި</button>
+        <button class="nav-btn" data-section="practice">ފަރިތަ</button>
+        <button class="nav-btn" data-section="quiz">ކްވިޒް</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ───────────── Main ───────────── -->
+  <main class="main-content" id="mainContent">
+
+    <!-- Home -->
+    <section id="home" class="section">
+      <div class="hero">
+        <div class="hero-letters" aria-hidden="true">
+          <span>ހ</span><span>ށ</span><span>ނ</span><span>ރ</span><span>ބ</span>
+        </div>
+        <h1 class="hero-title" dir="rtl">ދިވެހި ތާނަ ދަސްކުރަމާ!</h1>
+        <p class="hero-subtitle" dir="rtl">
+          ތާނަ ލިޔުން ދަސްކޮށް ދިވެހިބަހުގެ ރީތި ދުނިޔެ ހޯދާ
+        </p>
+        <div class="hero-stats">
+          <div class="stat-card">
+            <span class="stat-number">24</span>
+            <span class="stat-label" dir="rtl">އަކުރު</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">11</span>
+            <span class="stat-label" dir="rtl">ފިލި</span>
+          </div>
+        </div>
+        <button class="btn-primary" data-section="alphabet">ފަށަމާ! ▶</button>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">📚</div>
+          <h3 dir="rtl">24 އަކުރު</h3>
+          <p dir="rtl">ތާނަ ލިޔުންތެރި ހުރިހާ ލިޔުމެއް ދަސްކޮށްލާ</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">✍️</div>
+          <h3 dir="rtl">ހަރަކާތް / ފިލި</h3>
+          <p dir="rtl">11 ހަރަކާތް ބޭނުންކުރާ ގޮތް ދަސްކޮށްލާ</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔄</div>
+          <h3 dir="rtl">ފަރިތަ ކާޑް</h3>
+          <p dir="rtl">ފްލޭޝްކާޑް ބޭނުންކޮށް ދަސްވެފައިވާ ތަކެތި ތަކުރާރު ކޮށްލާ</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🏆</div>
+          <h3 dir="rtl">ކްވިޒް</h3>
+          <p dir="rtl">ދަސްވެގެން ހުރި ތަކެތި ކްވިޒްއަކުން ޓެސްޓްކޮށްލާ</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Alphabet -->
+    <section id="alphabet" class="section">
+      <div class="section-header">
+        <h2 dir="rtl">ދިވެހި ތާނަ</h2>
+        <p dir="rtl">ލިޔެލިތިރި ތިން ނަންގަވާ</p>
+      </div>
+      <div class="alphabet-grid" id="alphabetGrid"></div>
+    </section>
+
+    <!-- Fili -->
+    <section id="fili" class="section">
+      <div class="section-header">
+        <h2 dir="rtl">ހަރަކާތް (ފިލި)</h2>
+        <p dir="rtl">ތާނަ ވާވެލި</p>
+      </div>
+      <div class="fili-grid" id="filiGrid"></div>
+
+      <div class="fili-demo">
+        <h3 dir="rtl">ފިލި ބޭނުންކޮށް ލިޔެލިތިރި</h3>
+        <div class="demo-content">
+          <div class="demo-selector">
+            <label dir="rtl">އަކުރެއް ނަންގަވާ:</label>
+            <select id="demoLetter" class="demo-select" aria-label="ލިޔެލި"></select>
+          </div>
+          <div class="demo-combinations" id="demoCombinations"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Practice -->
+    <section id="practice" class="section">
+      <div class="section-header">
+        <h2 dir="rtl">ފަރިތަ ކުރުން</h2>
+        <p dir="rtl">ލިޔެލިތިތިތިތި ތަކުރާރު ކޮށްލާ</p>
+      </div>
+      <div class="practice-content">
+        <div class="practice-area" id="practiceArea"></div>
+      </div>
+    </section>
+
+    <!-- Quiz -->
+    <section id="quiz" class="section">
+      <div class="section-header">
+        <h2 dir="rtl">ކްވިޒް</h2>
+        <p dir="rtl">ދަސްވެގެން ހުރި ވަރު ބަލާ!</p>
+      </div>
+      <div class="quiz-content" id="quizContent"></div>
+    </section>
+
+  </main>
+
+  <!-- ───────────── Letter Detail Modal ───────────── -->
+  <div
+    class="modal-overlay"
+    id="letterModal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modalName"
+  >
+    <div class="modal-content" tabindex="-1">
+      <button class="modal-close" id="modalClose" aria-label="ބަންދު ކުރޭ">✕</button>
+      <div class="modal-letter thaana" id="modalLetter"></div>
+      <div class="modal-name" id="modalName"></div>
+      <div class="modal-sound" id="modalSound"></div>
+      <div class="modal-example" id="modalExample"></div>
+      <div class="modal-combinations" id="modalCombinations"></div>
+    </div>
+  </div>
+
+  <!-- ───────────── Bottom Nav (mobile) ───────────── -->
+  <nav class="bottom-nav" aria-label="ތިރީ ނެވިގޭޝަން">
+    <button class="bottom-nav-btn active" data-section="home">
+      <span class="nav-icon">🏠</span>
+      <span class="nav-label" dir="rtl">ހޯމް</span>
+    </button>
+    <button class="bottom-nav-btn" data-section="alphabet">
+      <span class="nav-icon thaana">ހ</span>
+      <span class="nav-label" dir="rtl">އަކުރު</span>
+    </button>
+    <button class="bottom-nav-btn" data-section="fili">
+      <span class="nav-icon thaana">ކަ</span>
+      <span class="nav-label" dir="rtl">ފިލި</span>
+    </button>
+    <button class="bottom-nav-btn" data-section="practice">
+      <span class="nav-icon">🔄</span>
+      <span class="nav-label" dir="rtl">ފަރިތަ</span>
+    </button>
+    <button class="bottom-nav-btn" data-section="quiz">
+      <span class="nav-icon">🏆</span>
+      <span class="nav-label" dir="rtl">ކްވިޒް</span>
+    </button>
+  </nav>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

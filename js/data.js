@@ -1,0 +1,42 @@
+const ALPHABET = [
+  { id: 1,  letter: "ހ", name: "ހާ",          nameEn: "Haa",        sound: "h",   example: "ހިތް",       exampleMeaning: "heart" },
+  { id: 2,  letter: "ށ", name: "ށަވިޔަނި",    nameEn: "Shaviyani",  sound: "sh",  example: "ށަވިޔަނި",  exampleMeaning: "Shaviyani" },
+  { id: 3,  letter: "ނ", name: "ނޫނު",        nameEn: "Noonu",      sound: "n",   example: "ނަން",       exampleMeaning: "name" },
+  { id: 4,  letter: "ރ", name: "ރާ",          nameEn: "Raa",        sound: "r",   example: "ރަށް",       exampleMeaning: "island" },
+  { id: 5,  letter: "ބ", name: "ބާ",          nameEn: "Baa",        sound: "b",   example: "ބިސް",       exampleMeaning: "egg" },
+  { id: 6,  letter: "ޅ", name: "ޅަވިޔަނި",    nameEn: "Lhaviyani",  sound: "lh",  example: "ޅަވިޔަނި",  exampleMeaning: "Lhaviyani" },
+  { id: 7,  letter: "ކ", name: "ކާފު",        nameEn: "Kaafu",      sound: "k",   example: "ކަނޑު",      exampleMeaning: "ocean" },
+  { id: 8,  letter: "އ", name: "އަލިފު",      nameEn: "Alifu",      sound: "a",   example: "އިރު",       exampleMeaning: "sun" },
+  { id: 9,  letter: "ވ", name: "ވާވު",        nameEn: "Vaavu",      sound: "v",   example: "ވެލި",       exampleMeaning: "sand" },
+  { id: 10, letter: "މ", name: "މީމު",        nameEn: "Meemu",      sound: "m",   example: "މަތި",       exampleMeaning: "above" },
+  { id: 11, letter: "ފ", name: "ފާފު",        nameEn: "Faafu",      sound: "f",   example: "ފެން",       exampleMeaning: "water" },
+  { id: 12, letter: "ދ", name: "ދާލު",        nameEn: "Dhaalu",     sound: "dh",  example: "ދިވެހި",     exampleMeaning: "Dhivehi" },
+  { id: 13, letter: "ތ", name: "ތާ",          nameEn: "Thaa",       sound: "th",  example: "ތަރި",       exampleMeaning: "star" },
+  { id: 14, letter: "ލ", name: "ލާމު",        nameEn: "Laamu",      sound: "l",   example: "ލޮނު",       exampleMeaning: "salt" },
+  { id: 15, letter: "ގ", name: "ގާފު",        nameEn: "Gaafu",      sound: "g",   example: "ގެ",         exampleMeaning: "house" },
+  { id: 16, letter: "ޏ", name: "ޏ",           nameEn: "Gnaviyani",  sound: "gn",  example: "ޏ",          exampleMeaning: "Gnaviyani" },
+  { id: 17, letter: "ސ", name: "ސީނު",        nameEn: "Seenu",      sound: "s",   example: "ސިލަ",       exampleMeaning: "flat stone" },
+  { id: 18, letter: "ޑ", name: "ޑ",           nameEn: "Dhaddu",     sound: "dd",  example: "ޑ",          exampleMeaning: "Dhaddu" },
+  { id: 19, letter: "ޒ", name: "ޒ",           nameEn: "Zaviyani",   sound: "z",   example: "ޒ",          exampleMeaning: "Zaviyani" },
+  { id: 20, letter: "ޓ", name: "ޓ",           nameEn: "Ttaa",       sound: "tt",  example: "ޓ",          exampleMeaning: "Ttaa" },
+  { id: 21, letter: "ޔ", name: "ޔ",           nameEn: "Yaa",        sound: "y",   example: "ޔ",          exampleMeaning: "Yaa" },
+  { id: 22, letter: "ޕ", name: "ޕ",           nameEn: "Paviyani",   sound: "p",   example: "ޕ",          exampleMeaning: "Paviyani" },
+  { id: 23, letter: "ޖ", name: "ޖ",           nameEn: "Jeem",       sound: "j",   example: "ޖ",          exampleMeaning: "Jeem" },
+  { id: 24, letter: "ޗ", name: "ޗ",           nameEn: "Chaviyani",  sound: "ch",  example: "ޗ",          exampleMeaning: "Chaviyani" },
+];
+
+const FILI = [
+  { id: 1,  mark: "ަ", name: "އަބަ ފިލި",    nameEn: "Abafili",     sound: "a",   romanized: "a"  },
+  { id: 2,  mark: "ާ", name: "އާބާ ފިލި",    nameEn: "Aabaafili",   sound: "aa",  romanized: "aa" },
+  { id: 3,  mark: "ި", name: "އިބި ފިލި",    nameEn: "Ibifili",     sound: "i",   romanized: "i"  },
+  { id: 4,  mark: "ީ", name: "އީ ފިލި",      nameEn: "Ebeefili",    sound: "ee",  romanized: "ee" },
+  { id: 5,  mark: "ު", name: "އުބު ފިލި",    nameEn: "Ubufili",     sound: "u",   romanized: "u"  },
+  { id: 6,  mark: "ޫ", name: "އޫ ފިލި",      nameEn: "Ooboofili",   sound: "oo",  romanized: "oo" },
+  { id: 7,  mark: "ެ", name: "އެބެ ފިލި",    nameEn: "Ebefili",     sound: "e",   romanized: "e"  },
+  { id: 8,  mark: "ޭ", name: "އޭ ފިލި",      nameEn: "Eeybeefili",  sound: "ey",  romanized: "ey" },
+  { id: 9,  mark: "ޮ", name: "އޮބޮ ފިލި",    nameEn: "Obofili",     sound: "o",   romanized: "o"  },
+  { id: 10, mark: "ޯ", name: "އޯ ފިލި",      nameEn: "Ooboofili2",  sound: "oa",  romanized: "oa" },
+  { id: 11, mark: "ް", name: "ސުކުން",        nameEn: "Sukun",       sound: "·",   romanized: "·"  },
+];
+
+const QUIZ_LETTERS = ALPHABET.slice(0, 20);
